@@ -20,7 +20,7 @@ const client = new tmi.client(options);
 client.connect();
 
 client.on("connected", function (address, port){
-    client.action('Stream', 'Je suis en ligne !')
+    console.log("Adress: " + address + " Port: " + port);
 });
 
 client.on("chat",  (channel, user, message, self) => {
