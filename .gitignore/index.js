@@ -19,6 +19,10 @@ const client = new tmi.client(options);
 // Connect the client to the server..
 client.connect();
 
+client.on("connected", function (address, port){
+
+});
+
 client.on("chat",  (channel, user, message, self) => {
 
     if (self) return;
