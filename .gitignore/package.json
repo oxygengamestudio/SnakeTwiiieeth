@@ -1,0 +1,14 @@
+{
+  "name": "snake",
+  "version": "1.0.0",
+  "description": "Snake Bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cooxy",
+  "license": "MIT",
+  "dependencies": {
+    "tmi.js": "^1.2.1"
+  }
+}
