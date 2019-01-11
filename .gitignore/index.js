@@ -88,8 +88,6 @@ function onMessageHandler (target, context, msg, self) {
   } else {
     console.log(`* Unknown command ${commandName}`);
   }
-
-    https://docs.google.com/document/d/1hRgvQxmMrsXIRrfmZ6V9-Ey_u-RZZxT8QM9Ya6LTvT0/edit?usp=sharing
     
 }
 
