@@ -82,6 +82,15 @@ function onMessageHandler (target, context, msg, self) {
     console.log(`* Unknown command ${commandName}`);
   }
 
+   if (commandName === '!dbd') {
+    client.say(target, `Tu vuex connaitre DBD alors cooxy t'a fait un guide a ce lien : https://docs.google.com/document/d/1hRgvQxmMrsXIRrfmZ6V9-Ey_u-RZZxT8QM9Ya6LTvT0/edit?usp=sharing`);
+    console.log(`* Executed ${commandName} command`);
+  } else {
+    console.log(`* Unknown command ${commandName}`);
+  }
+
+    https://docs.google.com/document/d/1hRgvQxmMrsXIRrfmZ6V9-Ey_u-RZZxT8QM9Ya6LTvT0/edit?usp=sharing
+    
 }
 
 // Called every time the bot connects to Twitch chat
