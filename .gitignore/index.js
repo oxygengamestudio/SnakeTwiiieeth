@@ -82,6 +82,12 @@ function onMessageHandler (target, context, msg, self) {
     console.log(`* Unknown command ${commandName}`);
   }
 
+  if (user['mod'] === false){
+    if(Message.inludes("www.") || message.includes(".com")){
+      client.timeout(channel, sender, 30, "Liens");
+    }
+  }
+
 }
 
 // Called every time the bot connects to Twitch chat
