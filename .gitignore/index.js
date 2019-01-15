@@ -25,7 +25,7 @@ client.on('connected', onConnectedHandler);
 // Connect to Twitch:
 client.connect();
 
-client.on("chat", (channel, user, message, self) => {
+function on((channel, user, message, self) => {
 
   if (self) return;
   let sender = user['display-name'];
@@ -34,7 +34,6 @@ client.on("chat", (channel, user, message, self) => {
     client.timeout(channel, sender, 60, "Lien Détecté");
     client.action(channel, "Pas de lien");
   }
-
 }
 
 // Called every time a message comes in
