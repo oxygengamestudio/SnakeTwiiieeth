@@ -31,15 +31,14 @@ function onMessageHandler (target, context, msg, self) {
 
   // Remove whitespace from chat message
   const commandName = msg.trim();
-    
-    if (self) return;
-  let sender = user['display-name'];
 
+  // If the command is known, let's execute it
+  
   if(message.includes("www.") || message.includes(".com")){
     client.timeout(channel, sender, 60, "Lien Détecté")
+    client.action(channel, "Pas de lien");
   }
-    
-  // If the command is known, let's execute it
+ 
   if (commandName === '!liens') {
     client.say(target, `Facebook: https://www.facebook.com/MasterSnakou | Twitter: https://twitter.com/MasterSnakou | Youtube: https://www.youtube.com/user/MasterSnakou | Youtube Replay: https://www.youtube.com/user/SnakouReplay | Instagram: https://www.instagram.com/mastersnakou | Snapchat: https://www.snapchat.com/add/mastersnakou`);
     console.log(`* Executed ${commandName} command`);
