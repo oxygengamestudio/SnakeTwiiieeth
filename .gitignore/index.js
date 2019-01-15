@@ -37,7 +37,6 @@ function onMessageHandler (target, context, msg, self) {
 
   if(message.includes("www.") || message.includes(".com")){
     client.timeout(channel, sender, 60, "Lien Détecté")
-    client.action(channel, "Pas de lien");
   }
     
   // If the command is known, let's execute it
