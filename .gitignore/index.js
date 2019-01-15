@@ -83,5 +83,5 @@ client.connect();
 
 // Called every time the bot connects to Twitch chat
 function onConnectedHandler (addr, port) {
-  client.action('CooxyBot', `* Connected to ${addr}:${port}`);
+  client.action('CooxyBot', `* Connecté au serveur : ${addr}:${port}`);
 }
