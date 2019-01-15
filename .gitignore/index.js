@@ -82,6 +82,9 @@ function onMessageHandler (target, context, msg, self) {
     console.log(`* Unknown command ${commandName}`);
   }
 
+  if (self) return;
+  let sender = user['display-name']
+
   if (user['mod'] === false){
     if(Message.inludes("www.") || message.includes(".com")){
       client.timeout(channel, sender, 30, "Liens");
