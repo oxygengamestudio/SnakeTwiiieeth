@@ -25,17 +25,6 @@ client.on('connected', onConnectedHandler);
 // Connect to Twitch:
 client.connect();
 
-function on((channel, user, message, self) => {
-
-  if (self) return;
-  let sender = user['display-name'];
-
-  if(message.includes("www.") || message.includes(".com")){
-    client.timeout(channel, sender, 60, "Lien Détecté");
-    client.action(channel, "Pas de lien");
-  }
-}
-
 // Called every time a message comes in
 function onMessageHandler (target, context, msg, self) {
   if (self) { return; } // Ignore messages from the bot
@@ -97,5 +86,5 @@ function onMessageHandler (target, context, msg, self) {
 
 // Called every time the bot connects to Twitch chat
 function onConnectedHandler (addr, port) {
-  console.log(`* Connected to ${addr}:${port}`);
+  client.action('CooxyBot', `* Connected to ${addr}:${port}`);
 }
