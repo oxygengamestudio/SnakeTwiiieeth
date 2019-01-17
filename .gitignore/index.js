@@ -107,12 +107,12 @@ function onMessageHandler (target, context, msg, self) {
 function onsubscription (channel, username, method, message, userstate) {
   client.say(channel, "Merci d'avoir SUB !")
   client.emoteonly("CooxyBot");
-});
+}
 
 function onfollow (channel, username, method, message, userstate) {
   client.say(channel, "Merci d'avoir SUB !")
   client.emoteonly("CooxyBot");
-});
+}
 
 // Called every time the bot connects to Twitch chat
 function onConnectedHandler (addr, port) {
