@@ -21,6 +21,7 @@ const client = new tmi.client(options);
 // Register our event handlers (defined below)
 client.on('message', onMessageHandler);
 client.on('connected', onConnectedHandler);
+client.on("ping", onPingHandler);
 
 // Connect to Twitch:
 client.connect();
@@ -92,7 +93,13 @@ function onMessageHandler (target, context, msg, self) {
   }
 }
 
+
 // Called every time the bot connects to Twitch chat
 function onConnectedHandler (addr, port) {
   client.action('CooxyBot', `* Connecté au serveur : ${addr}:${port}`);
+  function onPingHandler (ping) {
+    client.action('CooxyBot', `* Latence = ${ping}`);
+    }
   }
+  
+
