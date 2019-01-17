@@ -98,7 +98,7 @@ function onMessageHandler (target, context, msg, self) {
     console.log(`* Unknown command ${commandName}`);
   }
 
-  if(commandName === '!init'){
+  if(commandName === '!reco'){
     reconnect
     console.log(`* Executed ${commandName} command`);
   } else {
