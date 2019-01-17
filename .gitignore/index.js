@@ -1,4 +1,4 @@
- const tmi = require("tmi.js");
+const tmi = require("tmi.js");
 
 const options = {
     options: {
@@ -20,7 +20,6 @@ const client = new tmi.client(options);
 
 // Register our event handlers (defined below)
 client.on('message', onMessageHandler);
-client.action('CooxyBot', 'Initialisation')
 client.on('connected', onConnectedHandler);
 
 // Connect to Twitch:
@@ -98,3 +97,7 @@ function onMessageHandler (target, context, msg, self) {
 function onConnectedHandler (addr, port) {
   client.action('CooxyBot', `* Connecté au serveur : ${addr}:${port}`);
   }
+
+function onMessageHandler {
+    client.action('CooxyBot', `* Initialisation`);
+}
