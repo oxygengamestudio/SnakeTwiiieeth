@@ -104,12 +104,12 @@ function onMessageHandler (target, context, msg, self) {
   }
 }
 
-client.on("subscription", function (channel, username, method, message, userstate) {
+function onsubscription (channel, username, method, message, userstate) {
   client.say(channel, "Merci d'avoir SUB !")
   client.emoteonly("CooxyBot");
 });
 
-client.on("follow", function (channel, username, method, message, userstate) {
+function onfollow (channel, username, method, message, userstate) {
   client.say(channel, "Merci d'avoir SUB !")
   client.emoteonly("CooxyBot");
 });
