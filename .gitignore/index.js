@@ -21,10 +21,21 @@ const client = new tmi.client(options);
 // Register our event handlers (defined below)
 client.on('message', onMessageHandler);
 client.on('connected', onConnectedHandler);
-client.on("pong", function (latency) {
- client.say(target, 'latency')});
-// Connect to Twitch:
 client.connect();
+
+
+function isSubscriber(user){
+  return user.subscriber;
+}
+
+function isModerator(user){
+  return user.mod;
+}
+
+function isBroadcaster(user){
+  return user.badges.broadcaster == '1';
+}
+w
 
 // Called every time a message comes in
 function onMessageHandler (target, context, msg, self) {
@@ -93,6 +104,15 @@ function onMessageHandler (target, context, msg, self) {
   }
 }
 
+client.on("subscription", function (channel, username, method, message, userstate) {
+  client.say(channel, "Merci d'avoir SUB !")
+  client.emoteonly("CooxyBot");
+});
+
+client.on("follow", function (channel, username, method, message, userstate) {
+  client.say(channel, "Merci d'avoir SUB !")
+  client.emoteonly("CooxyBot");
+});
 
 // Called every time the bot connects to Twitch chat
 function onConnectedHandler (addr, port) {
