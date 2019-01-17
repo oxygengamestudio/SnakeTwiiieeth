@@ -91,13 +91,20 @@ function onMessageHandler (target, context, msg, self) {
     }
   }
 
-  if(commandName === '!inte'){
-    client.say(target,`Je suis ${self}, je suis connecté au serveur ${addr}:${port} avec une latence de ${ping}`)
+  if(commandName === '!infi'){
+    client.say(target,`Je suis CooxyBot, je suis connecté au serveur : ${addr}:${port}`)
     console.log(`* Executed ${commandName} command`);
   } else {
     console.log(`* Unknown command ${commandName}`);
   }
-    
+
+  if(commandName === '!reco'){
+    reconnect
+    console.log(`* Executed ${commandName} command`);
+  } else {
+    console.log(`* Unknown command ${commandName}`);
+  }
+
 }
 
 // Called every time the bot connects to Twitch chat
