@@ -90,21 +90,6 @@ function onMessageHandler (target, context, msg, self) {
       client.timeout(channel, sender, 30, "Liens");
     }
   }
-
-  if(commandName === '!infi'){
-    client.say(target,`Je suis CooxyBot, je suis connecté au serveur : ${addr}:${port}`)
-    console.log(`* Executed ${commandName} command`);
-  } else {
-    console.log(`* Unknown command ${commandName}`);
-  }
-
-  if(commandName === '!reco'){
-    reconnect
-    console.log(`* Executed ${commandName} command`);
-  } else {
-    console.log(`* Unknown command ${commandName}`);
-  }
-
 }
 
 // Called every time the bot connects to Twitch chat
