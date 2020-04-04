@@ -8,10 +8,10 @@ const options = {
         reconnect: true
     },
     identity: {
-        username: "cooxybot",
-        password: "oauth:kqboawtmb28kk9kxu9lvq9yp2xhsgs"
+        username: "CooxyIsBack",
+        password: "oauth:qd96q60wkjoissy6m71fkaa4ui7v06"
     },
-    channels: ["#cooxybot"]
+    channels: ["#cooxyisback"]
 };
 
 
